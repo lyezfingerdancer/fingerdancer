@@ -1,17 +1,12 @@
 <template>
-  <div class="hello">
+  <div class="wall">
     <h1>照片墙</h1>
-
-<img src="../assets/gk6.jpg">
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
+  name: 'Wall',
   mounted() {
     this.init()
   },
@@ -24,14 +19,13 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello {
+.wall {
   width: 900px;
   margin: 0 auto;
   color: #fff;
 }
-.hello > img {
+.wall > img {
   width: 900px;
 }
 </style>

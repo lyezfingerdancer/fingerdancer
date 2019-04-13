@@ -15,13 +15,22 @@ export default new Router({
         )
     },
     {
-        path: '/hello',
+        path: '/wall',
         component: r =>
           require.ensure(
             [],
-            () => r(require('@/components/HelloWorld')),
-            'hello'
+            () => r(require('@/components/Wall')),
+            'wall'
           )
-    }
+    },
+    {
+      path: '/about',
+      component: r =>
+        require.ensure(
+          [],
+          () => r(require('@/components/About')),
+          'about'
+        )
+  }
   ]
 })

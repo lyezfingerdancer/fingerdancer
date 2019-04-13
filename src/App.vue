@@ -3,16 +3,15 @@
       <div class="nav">
         <div class="item">指舞社</div>
         <div class="item"><a href="/index.html">主页</a></div>
-        <div class="item"> <router-link to="/hello">照片墙</router-link></div>
+        <div class="item"> <router-link to="/wall">照片墙</router-link></div>
         <div class="item">活动</div>
-        <div class="item">关于</div>
+        <div class="item"> <router-link to="/about">关于</router-link></div>
         <div class="item">联系我</div>
       </div>
       <div class="app-content"> 
         <router-view></router-view>
       </div>
       <div class="app-bg"></div>
-      
   </div>
 </template>
 
@@ -61,10 +60,14 @@ export default {
     .item:last-child {
       float: right;
     }
+    .item:first-child {
+       background-color: rgba(255,255,255,0.3);
+    }
   }
   .app-content {
     position: relative;
-    top: 40px;
+    top: 80px;
+    height: calc(100% - 80px);
     width: 100%;
     z-index: 1001;
   }

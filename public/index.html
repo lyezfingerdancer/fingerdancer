@@ -16,6 +16,7 @@
         padding: 0;
         margin: 0;
         font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+        user-select: none;
       }
       a {
         text-decoration: none;
@@ -38,17 +39,16 @@
     }
     .content {
       position: absolute;
-      width: 600px;
-      height: 600px;
-      top: 30%;
-      left: 30%;
+      width: 30%;
+      top: 5%;
+      left: 35%;
       z-index: 1001;
       font-size: 30px;
       color: white;
       font-weight: bold;
       text-align: center;
-      background-color: rgba(255,255,255,0.2);
-     box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      /* background-color: rgba(255,255,255,0.2); */
+      /* box-shadow: 0 2px 6px rgba(0,0,0,0.6); */
     }
     .content > img {
       width: 100%;
@@ -63,7 +63,7 @@
   <body>
     <div id="index">
       <div class="bg"></div>
-      <div class="content"><img src="logo.jpg" alt=""></div>
+      <div class="content"><img src="logo.png" alt=""></div>
     </div>
     <div id="app"></div>
   </body>
