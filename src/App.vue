@@ -46,6 +46,8 @@ export default {
     z-index: 1001;
     width: 100%;
     height: 40px;
+     background-color: rgba(255,255,255,0.2);
+     box-shadow: 0 2px 6px rgba(0,0,0,0.6);
     .item {
     float: left;
     width: 100px;
@@ -53,10 +55,11 @@ export default {
     color: white;
     text-align: center;
     line-height: 40px;
+   
     cursor: pointer;
     }
     .item:last-child {
-    float: right;
+      float: right;
     }
   }
   .app-content {
