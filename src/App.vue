@@ -77,11 +77,12 @@ export default {
     left: 0;
     width:100%;
     height:100%;
-    background: url("./assets/ontheway.jpg") no-repeat fixed;
+    background: url("./assets/bg1.jpg") no-repeat fixed;
     box-sizing: border-box;
     background-position: center;
     background-size: cover;
     z-index:1000;  
   }
+
 }
 </style>

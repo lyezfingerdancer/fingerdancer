@@ -22,7 +22,12 @@ export default {
   data () {
     return {
       show: -1,
-      profile: [{url: require('../assets/h-1.jpg'), name: '知与南'},{url: require('../assets/h-2.jpg'), name: '轻舞飞扬'},{url: require('../assets/h-3.jpg'), name: '花超'}]
+      profile: [
+        {url: require('../assets/h-1.jpg'), name: '知与南'},
+        {url: require('../assets/h-2.jpg'), name: '轻舞飞扬'},
+        {url: require('../assets/h-3.jpg'), name: '花超'},
+        {url: require('../assets/h-4.jpg'), name: '连总'}
+      ]
     }
   },
   mounted() {
@@ -33,8 +38,10 @@ export default {
       let index = document.getElementById('index')
       index.style.display = "none"
     },
+    /* eslint-disable */
     showTip (index) {
       this.show = index
+      // this.show = 3
     },
     hide () {
       this.show = -1
@@ -115,6 +122,15 @@ export default {
           box-shadow: 0 2px 6px rgba(0,0,0,0.6);
           border-radius: 5px;
         }
+      }
+    }
+    .profile-item:last-child {
+      position: absolute;
+      top: -180px;
+      left: 33.3%;
+      .item-t {
+        width: 60%;
+        left: 20%;
       }
     }
   }
