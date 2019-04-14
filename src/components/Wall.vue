@@ -23,22 +23,10 @@ export default {
 
 <style lang="scss" scoped>
 .wall {
-  width: 900px;
-  margin: 20px auto;
-  padding: 20px 0;
+  width: 100%;
   color: #fff;
-  background-color: rgba(255,255,255,0.2);
 }
 .wall > img {
   width: 200px;
 }
-// 手机兼容处理 宽度小于568px
- @media screen and (max-width: 568px) {
-  .wall {
-     min-width: 320px;
-     width: calc(100% - 20px);
-     box-shadow: none;
-     border-radius: 5px;
-    }
- }
 </style>

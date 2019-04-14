@@ -30,9 +30,14 @@
       </div>
       <div class="app-content" :class="[show&&!isPc ? 'content-enter': 'content-leave']"> 
         <router-view></router-view>
-
+        <div class="footer">
+          <div class="copyright">© 
+            <span class="copyright-year">2014-2019</span>
+            <span class="author">知与南</span>
+          </div>
+        </div>
       </div>
-      <div class="app-bg"></div>
+
   </div>
 </template>
 
@@ -105,18 +110,29 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   text-align: center;
+  background-image:  url("/bg1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   .nav {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     overflow: hidden;
-    z-index: 1001;
+    z-index: 1003;
     width: 100%;
     background-color: rgba(255,255,255,0.2);
     box-shadow: 0 2px 6px rgba(0,0,0,0.6);
     .nav-toggle {
       position: relative;
       display: none;
+    }
+    .nav-wrapper {
+      width: 920px;
+      margin: 0 auto;
     }
     .item {
       float: left;
@@ -133,32 +149,31 @@ export default {
     }
     .item:last-child {
       float: right;
-      right: 20px;
     }
     .item:hover {
       background-color: rgba(255,255,255,0.1);
     }
   }
   .app-content {
-    position: absolute;
-    top: 80px;
-    width: 100%;
-    z-index: 1001;
-    // background-color:  #f5f7f9;
-    padding-bottom: 60px
+    width: 900px;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    .footer {
+      width: 100%;
+      padding: 20px 0;
+      min-height: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: rgb(197, 197, 197);
+    }
   }
-  .app-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width:100%;
-    height:100%;
-    background: url("/bg1.jpg") no-repeat fixed;
-    box-sizing: border-box;
-    background-position: center;
-    background-size: cover;
-    z-index:1000;  
-  }
+
  
 }
 // 手机兼容处理 宽度小于568px
@@ -230,7 +245,8 @@ export default {
       }
     }
     .app-content {
-      margin: 0;
+      width: calc(100% - 40px);
+      margin-top: 100px;
     }
   }
 }

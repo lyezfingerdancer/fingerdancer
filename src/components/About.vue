@@ -13,6 +13,7 @@
       </div>
     </div>
   </div>
+  
 </template>
 
 <script>
@@ -58,13 +59,8 @@ export default {
 <style lang="scss" scoped>
 .about {
   position: relative;
-  width: 900px;
-  padding: 10px;
-  margin: 20px auto;
+  width: 100%;
   color: #fff;
-  background-color: rgba(255,255,255,0.2);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  border-radius: 5px;
   .tips {
     position: absolute;
     left: 10%;
@@ -135,9 +131,6 @@ export default {
   // 手机兼容处理 宽度小于568px
  @media screen and (max-width: 568px) {
   .about {
-     min-width: 320px;
-     width: calc(100% - 40px);
-     box-shadow: none;
     .profile  {
       height: 50px;
       margin-top: 60px;
