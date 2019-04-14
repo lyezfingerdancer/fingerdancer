@@ -82,10 +82,11 @@ export default {
   }
   .profile {
     position: relative;
-    margin-top: 200px;
+    margin-top: 300px;
     left: 10%;
     width: 80%;
     height: 100px;
+    padding-bottom: 20px;
     cursor: pointer;
     .profile-item {
       float: left;

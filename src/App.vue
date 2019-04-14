@@ -23,7 +23,7 @@
             <router-link to="/about"> <div class="item-b">关于</div><span class="pointer" :style="[defaultSelect == 4 ? styleDisplay : '']"></span> </router-link>
           </div>
           <div class="item" @click="select(5)" :style="[defaultSelect == 5 ? styles : '']" >
-            <a href="https://github.com/pengqiangsheng" target="_blank"><div class="item-b">联系我</div> <span class="pointer" :style="[defaultSelect == 5 ? styleDisplay : '']"></span></a>
+            <a href="https://forever.netlify.com" target="_blank"><div class="item-b">联系我</div> <span class="pointer" :style="[defaultSelect == 5 ? styleDisplay : '']"></span></a>
           </div>
         </div>
      
