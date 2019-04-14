@@ -21,13 +21,24 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .message {
   width: 900px;
-  margin: 0 auto;
+  margin: 20px auto;
+  padding: 20px 0;
   color: #fff;
+  background-color: rgba(255,255,255,0.2);
 }
 .message > img {
   width: 200px;
 }
+// 手机兼容处理 宽度小于568px
+ @media screen and (max-width: 568px) {
+  .message {
+     min-width: 320px;
+     width: calc(100% - 20px);
+     box-shadow: none;
+     border-radius: 5px;
+    }
+ }
 </style>

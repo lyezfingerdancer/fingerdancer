@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <h1>指舞社</h1>
     <p>指舞，意为指尖上的舞蹈，手指的舞者。</p>
     <p>本社团创立于2014年，地点在龙岩二中高二13班。</p>
     <p>名字的灵感来源于我们班同学们的头脑风暴，这个名字的背后还有一个故事。</p>
@@ -38,10 +37,8 @@ export default {
       let index = document.getElementById('index')
       index.style.display = "none"
     },
-    /* eslint-disable */
     showTip (index) {
       this.show = index
-      // this.show = 3
     },
     hide () {
       this.show = -1
@@ -63,8 +60,7 @@ export default {
   position: relative;
   width: 900px;
   padding: 10px;
-  height: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
   color: #fff;
   background-color: rgba(255,255,255,0.2);
   box-shadow: 0 2px 6px rgba(0,0,0,0.6);
@@ -85,9 +81,9 @@ export default {
     }
   }
   .profile {
-    position: absolute;
+    position: relative;
+    margin-top: 200px;
     left: 10%;
-    bottom: 40px;
     width: 80%;
     height: 100px;
     cursor: pointer;
@@ -113,11 +109,11 @@ export default {
         height: 30px;
         text-align: center;
         line-height: 30px;
-  
         .item-text {
           width: 50%;
           margin: 0 auto;
           height: 30px;
+          color: #000;
           background-color: rgba(255,255,255,0.2);
           box-shadow: 0 2px 6px rgba(0,0,0,0.6);
           border-radius: 5px;
@@ -135,4 +131,33 @@ export default {
     }
   }
 }
+  // 手机兼容处理 宽度小于568px
+ @media screen and (max-width: 568px) {
+  .about {
+     min-width: 320px;
+     width: calc(100% - 40px);
+     box-shadow: none;
+    .profile  {
+      height: 50px;
+      margin-top: 60px;
+      padding-bottom: 20px;
+      .profile-item {
+        width: 25%;
+        .item-t {
+          width: 25%;
+          .item-text {
+            width: 100%;
+            font-size: 14px;
+          }
+        }
+      }
+      .profile-item:last-child {
+        position: inherit;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+ }
 </style>
