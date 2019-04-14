@@ -1,6 +1,8 @@
 <template>
   <div class="wall">
     <h1>照片墙</h1>
+    <img src="/eye.gif">
+    <h2>小姐姐是不可能有的，Never</h2>
   </div>
 </template>
 
@@ -26,6 +28,6 @@ export default {
   color: #fff;
 }
 .wall > img {
-  width: 900px;
+  width: 200px;
 }
 </style>

@@ -37,10 +37,77 @@
       -ms-filter: blur(5px);
       filter: blur(5px); */
     }
+    .content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url("bg2-s.jpeg") no-repeat fixed;
+      box-sizing: border-box;
+      background-position: center;
+      background-size: cover;
+      text-align: center;
+      color: #fff;
+    }
+    .content > .wrapper {
+      position: relative;
+      width: 80%;
+      height: 80%;
+      left: 10%;
+      top: 10%;
+      border-radius: 5px;
+      background-color: rgba(255,255,255,0.2);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.6); 
+    }
+    .content > .wrapper > .header {
+      position: relative;
+      padding-top: 10px;
+      width: 500px;
+      margin: 0 auto;
 
+    }
+    .content >  .wrapper > .c-video {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+    .content >  .wrapper > .c-video > .video-wrapper {
+      width: 600px;
+      height: 100%;
+      margin: 0 auto;
+    }
+    .lxfs {
+      margin-top: 20px;
+    }
+    .back {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+    }
     </style>
   </head>
   <body>
-
+    <div class="content">
+      <div class="wrapper">
+          <div class="header"><h1>龙岩二中指舞社招新视频</h1></div>
+          <div class="c-video">
+             <div class="video-wrapper"><iframe height=300 width=600 src='http://player.youku.com/embed/XMTY1OTk2Njg1Ng==' frameborder=0 'allowfullscreen'></iframe></div> 
+          </div>
+          <div class="lxfs">
+            <h3>指舞社官方QQ号：1378282770</h3>
+            <h2>我们的口号是</h2>
+            <h1>指向披靡，舞无不能</h1>
+            <img height="100px" width="200px" src="huanhu.gif">
+          </div>
+          
+          <div class="back">
+            <a href="index.html">
+              <img height="30px" width="30px" src="back1.png">
+            </a>
+          </div>
+      </div>
+    </div>
   </body>
 </html>

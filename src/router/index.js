@@ -7,30 +7,19 @@ export default new Router({
   routes: [
     {
       path: '/index',
-      component: r =>
-        require.ensure(
-          [],
-          () => r(require('@/App')),
-          'index'
-        )
+      component: r => require.ensure([],() => r(require('@/App')),'index')
     },
     {
-        path: '/wall',
-        component: r =>
-          require.ensure(
-            [],
-            () => r(require('@/components/Wall')),
-            'wall'
-          )
+      path: '/wall',
+      component: r => require.ensure([],() => r(require('@/components/Wall')),'wall')
     },
     {
       path: '/about',
-      component: r =>
-        require.ensure(
-          [],
-          () => r(require('@/components/About')),
-          'about'
-        )
-  }
+      component: r => require.ensure([],() => r(require('@/components/About')),'about')
+    },
+    {
+      path: '/message',
+      component: r => require.ensure([],() => r(require('@/components/Message')),'message')
+    }
   ]
 })

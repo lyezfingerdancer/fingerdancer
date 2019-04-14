@@ -1,12 +1,11 @@
 <template>
   <div id="app">
       <div class="nav">
-        <div class="item">指舞社</div>
-        <div class="item"><a href="/index.html">主页</a></div>
-        <div class="item"> <router-link to="/wall">照片墙</router-link></div>
-        <div class="item">活动</div>
-        <div class="item"> <router-link to="/about">关于</router-link></div>
-        <div class="item">联系我</div>
+        <div class="item" @click="select(1)" :style="[defaultSelect == 1 ? styles : '']"><a href="index.html"><div class="item-b">主页</div></a></div>
+        <div class="item" @click="select(2)" :style="[defaultSelect == 2 ? styles : '']" > <router-link to="/wall"><div class="item-b">照片墙</div> </router-link></div>
+        <div class="item" @click="select(3)" :style="[defaultSelect == 3 ? styles : '']" > <router-link to="/message"><div class="item-b">留言墙</div> </router-link></div>
+        <div class="item" @click="select(4)" :style="[defaultSelect == 4 ? styles : '']" > <router-link to="/about"> <div class="item-b">关于</div> </router-link></div>
+        <div class="item" @click="select(5)" :style="[defaultSelect == 5 ? styles : '']" ><a href="https://github.com/pengqiangsheng" target="_blank"><div class="item-b">联系我</div> </a></div>
       </div>
       <div class="app-content"> 
         <router-view></router-view>
@@ -18,6 +17,11 @@
 <script>
 export default {
   name: 'app',
+  data () {
+    return {
+      defaultSelect: 1
+    }
+  },
   watch: {
     $route(to) {
       let index = document.getElementById('index')
@@ -26,6 +30,21 @@ export default {
       }
     }
   },
+  methods: {
+    select (index) {
+      this.defaultSelect = index
+       /* eslint-disable */
+      console.log(this.defaultSelect)
+    }
+  },
+  computed: {
+    styles () {
+      let style = {
+        backgroundColor: 'rgba(255,255,255,0.3)'
+      }
+      return style;
+    }
+  }
 }
 </script>
 
@@ -45,23 +64,27 @@ export default {
     z-index: 1001;
     width: 100%;
     height: 40px;
-     background-color: rgba(255,255,255,0.2);
-     box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
     .item {
-    float: left;
-    width: 100px;
-    height: 100%;
-    color: white;
-    text-align: center;
-    line-height: 40px;
-   
-    cursor: pointer;
+      float: left;
+      width: 100px;
+      height: 100%;
+      color: white;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+      .item-b {
+        height: 100%;
+        width: 100%;
+      }
     }
     .item:last-child {
       float: right;
+      right: 20px;
     }
-    .item:first-child {
-       background-color: rgba(255,255,255,0.3);
+    .item:hover {
+      background-color: rgba(255,255,255,0.1);
     }
   }
   .app-content {
@@ -77,7 +100,7 @@ export default {
     left: 0;
     width:100%;
     height:100%;
-    background: url("./assets/bg1.jpg") no-repeat fixed;
+    background: url("/bg1.jpg") no-repeat fixed;
     box-sizing: border-box;
     background-position: center;
     background-size: cover;
